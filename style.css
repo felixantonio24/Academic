@@ -1,0 +1,177 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #070808;
+    padding: 1rem;
+  }
+  
+  .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos de la barra de navegación se ajusten en pantallas más pequeñas */
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #ffffff;
+    padding: 4rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+  }
+  
+  .hero button {
+    padding: 1rem 2rem;
+    background-color: #04090b;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+
+  /* Footer */
+  footer {
+    background-color: #03045e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Media Queries - Responsiveness */
+  @media (max-width: 768px) {
+    /* Reducción del tamaño de la fuente y del padding en dispositivos más pequeños */
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero button {
+      padding: 0.8rem 1.5rem;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu li a {
+      font-size: 1.2rem;
+      padding: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos) */
+    .hero {
+      padding: 2rem;
+    }
+  
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero button {
+      padding: 0.8rem 1rem;
+    }
+  
+    .menu li a {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  }
+  
+
+  .hero {
+    background-image: url('pexels-gabriel-manjarres-119584478-19064138.jpg');  /* Ruta de la imagen */
+    background-size: cover;         /* Asegura que la imagen cubra toda la sección */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* Evita que la imagen se repita */
+    height: 100vh;                  /* Asegura que la sección tenga la altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+                  /* Para que el texto sea visible sobre la imagen */
+  }
+  
+  .hero-content {
+    z-index: 1;                     /* Asegura que el contenido esté por encima de la imagen */
+  }
+  
+  .tittle_tittle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  button:hover {
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: 0.7s;
+  }
+  .hovver_button :hover{
+  background-color: #0077b6;
+  }
+  .parr-{
+    text-shadow: 10px 2px 2px black;
+  }
+  .cambio {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .cambio::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
