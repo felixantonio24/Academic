@@ -115,7 +115,7 @@
   
 
   .hero {
-    background-image: url('pexels-gabriel-manjarres-119584478-19064138.jpg');  /* Ruta de la imagen */
+    background-image: url('assets/img/pexels-gabriel-manjarres-119584478-19064138.jpg');  /* Ruta de la imagen */
     background-size: cover;         /* Asegura que la imagen cubra toda la sección */
     background-position: center;    /* Centra la imagen */
     background-repeat: no-repeat;   /* Evita que la imagen se repita */
@@ -175,3 +175,51 @@
     }
   }
   
+
+.courses-section{
+  background: #050505;
+}
+.continer{
+  color: white;
+}
+
+.continer  ul{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.continer a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.continer img{
+  image-orientation: from-image;
+  width: 20em;
+
+}
+
+.continer  ul :hover{
+ color: red;
+ text-shadow: 1px 0px 1px rgb(254, 255, 255);
+ filter: drop-shadow(1px 0px  1px rgb(255, 254, 254));
+ transition: 0.2s;
+
+ 
+}
+.continer ul:hover li {
+  filter: blur(2px); /* Aplica un desenfoque a todos los <li> cuando el <ul> está en hover */
+  opacity: 0.5; /* Reduce la opacidad de todos los <li> */
+  transition: 0.3s; /* Suaviza la transición */
+}
+
+.continer ul li:hover {
+  filter: blur(0); /* Elimina el desenfoque del <li> seleccionado */
+  opacity: 1; /* Restaura la opacidad del <li> seleccionado */
+  transform: scale(1.05); /* Opcional: Aumenta ligeramente el tamaño del <li> seleccionado */
+}
