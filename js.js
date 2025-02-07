@@ -6,7 +6,7 @@ function scrollToCourses() {
     }
   }
   
-  let textoOriginal = "la universidad";
+  let textoOriginal = " a la universidad";
   let textoCambio = "al éxito";
   
   let parteCambio = document.querySelector('.cambio');
