@@ -61,16 +61,7 @@
   
 
   /* Footer */
-  footer {
-    background-color: #03045e;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
+
   /* Media Queries - Responsiveness */
   @media (max-width: 768px) {
     /* Reducción del tamaño de la fuente y del padding en dispositivos más pequeños */
@@ -222,4 +213,20 @@
   filter: blur(0); /* Elimina el desenfoque del <li> seleccionado */
   opacity: 1; /* Restaura la opacidad del <li> seleccionado */
   transform: scale(1.05); /* Opcional: Aumenta ligeramente el tamaño del <li> seleccionado */
+}
+
+
+
+
+
+
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
