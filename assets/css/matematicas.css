@@ -1,0 +1,36 @@
+*,
+*::after,*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+
+}
+
+header{
+    justify-content: center;
+    display: flex;
+    color: var(--white);
+    align-items: center;
+ margin: 4em;
+ font-family: serif;
+ font-size: 2em;
+ text-overflow: clip;
+    
+}
+
+.header-tiitle-img
+{text-align: center;
+
+}
+
+:root{
+  --white :rgb(255, 255, 255);
+}
+.header--image{
+width:auto;
+overflow: ;
+}

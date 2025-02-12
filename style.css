@@ -196,7 +196,7 @@
 }
 
 .continer  ul :hover{
- color: red;
+ 
  text-shadow: 1px 0px 1px rgb(254, 255, 255);
  filter: drop-shadow(1px 0px  1px rgb(255, 254, 254));
  transition: 0.2s;
