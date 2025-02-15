@@ -229,6 +229,17 @@
 
 /* Cuando el usuario hace scroll y el div entra en la vista */
 
+@media (min-width: 769px) { /* Para PC */
+  .continer {
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+}
+
+@media (max-width: 768px) { /* Para móviles */
+  .continer {
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+}
 
 
 footer {

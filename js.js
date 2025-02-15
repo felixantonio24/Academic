@@ -56,9 +56,12 @@ function scrollToCourses() {
     entries.forEach(entry => {
         if (entry.isIntersecting) { 
             entry.target.classList.add('visible'); 
+            observer.unobserve(entry.target); // Deja de observar el elemento
         }
     });
-}, { rootMargin: "200px 0px" }); // Reduce el margen para activarse antes en móviles
+}, { 
+    rootMargin: window.innerWidth > 768 ? "100px 0px" : "200px 0px"
+});
 
-const target = document.querySelector('.continer');
-observer.observe(target);
+// Seleccionamos todos los elementos con la clase .continer
+document.querySelectorAll('.continer').forEach(element => observer.observe(element));
