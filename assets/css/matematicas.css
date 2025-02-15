@@ -10,19 +10,18 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-header {
-    justify-content: center;
-    display: flex;
-    color: var(--white);
-    align-items: center;
-    margin: 4em;
-    font-family: serif;
-    font-size: 2em;
-    text-overflow: clip;
-}
-
-.header-tiitle-img {
+.header-tittle-h2{
     text-align: center;
+    color: white;
+    margin: 0em;
+    font-size: 2em;
+    text-shadow: 2px 0px 2px var(--white);
+}
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
 }
 
 :root {
@@ -46,7 +45,7 @@ header {
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: conic-gradient(red, blue, cyan, rgb(255, 0, 0), yellow, red);
+    background: conic-gradient(red, blue, cyan, rgb(7, 228, 7), yellow, red);
     border-radius: 10px;
     z-index: -1;
     animation: giro 3s linear infinite;
@@ -66,4 +65,31 @@ header {
     border-radius: 10px;
     position: relative;
     z-index: 1;
+}
+.parr--matemati-header{
+color: var(--white);
+font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    max-width: 900%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(59, 55, 49);
+    border-radius: 10px;
+
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Posición inicial más abajo */
+    animation: slideUp 1s ease-out forwards; /* Aplica la animación */
+
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

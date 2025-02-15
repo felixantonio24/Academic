@@ -215,9 +215,19 @@
   transform: scale(1.05); /* Opcional: Aumenta ligeramente el tamaño del <li> seleccionado */
 }
 
+.continer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
+/* Se activa cuando el usuario hace scroll */
+.continer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-
+/* Cuando el usuario hace scroll y el div entra en la vista */
 
 
 

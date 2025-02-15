@@ -51,3 +51,16 @@ function scrollToCourses() {
   // Inicia la animación con la frase original
   escribirTexto(textoOriginal);
   
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Activa la animación
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const contenedor = document.querySelector(".continer");
+    observer.observe(contenedor);
+});
