@@ -1,36 +1,69 @@
 *,
-*::after,*::before
-{
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: rgb(0, 0, 0);
 
+body {
+    background-color: rgb(0, 0, 0);
 }
 
-header{
+header {
     justify-content: center;
     display: flex;
     color: var(--white);
     align-items: center;
- margin: 4em;
- font-family: serif;
- font-size: 2em;
- text-overflow: clip;
-    
+    margin: 4em;
+    font-family: serif;
+    font-size: 2em;
+    text-overflow: clip;
 }
 
-.header-tiitle-img
-{text-align: center;
-
+.header-tiitle-img {
+    text-align: center;
 }
 
-:root{
-  --white :rgb(255, 255, 255);
+:root {
+    --white: rgb(255, 255, 255);
 }
-.header--image{
-width:auto;
-overflow: ;
+
+/* Contenedor de la imagen con efecto de borde */
+.header--image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px; /* Espacio para el borde */
+    overflow: hidden;
+}
+
+/* Efecto de borde brillante animado */
+.header--image-container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: conic-gradient(red, blue, cyan, rgb(255, 0, 0), yellow, red);
+    border-radius: 10px;
+    z-index: -1;
+    animation: giro 3s linear infinite;
+    filter: blur(8px); /* Hace que el brillo se vea más realista */
+}
+
+/* Animación de rotación en sentido horario */
+@keyframes giro {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Imagen */
+.header--image {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
