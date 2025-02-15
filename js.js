@@ -52,15 +52,13 @@ function scrollToCourses() {
   escribirTexto(textoOriginal);
   
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible"); // Activa la animación
-            }
-        });
-    }, { threshold: 0.5 });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { 
+            entry.target.classList.add('visible'); 
+        }
+    });
+}, { rootMargin: "-50px 0px" }); // Reduce el margen para activarse antes en móviles
 
-    const contenedor = document.querySelector(".continer");
-    observer.observe(contenedor);
-});
+const target = document.querySelector('.continer');
+observer.observe(target);
