@@ -58,7 +58,7 @@ function scrollToCourses() {
             entry.target.classList.add('visible'); 
         }
     });
-}, { rootMargin: "-50px 0px" }); // Reduce el margen para activarse antes en móviles
+}, { rootMargin: "200px 0px" }); // Reduce el margen para activarse antes en móviles
 
 const target = document.querySelector('.continer');
 observer.observe(target);
