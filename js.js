@@ -65,3 +65,6 @@ function scrollToCourses() {
 
 // Seleccionamos todos los elementos con la clase .continer
 document.querySelectorAll('.continer').forEach(element => observer.observe(element));
+
+
+
