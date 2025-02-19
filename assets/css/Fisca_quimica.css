@@ -76,8 +76,27 @@ body{
 }
 .flechita{
 margin-left: 40rem;
-cursor: pointer;
+cursor: pointer; 
+animation: latido 1.5s infinite;
+
 }
+  
+  @keyframes latido {
+    0% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.6); /* Se agranda un poco */
+    }
+    100% {
+      transform: scale(1); /* Vuelve al tamaño normal */
+    }
+  }
+
+
+
+
+
 .section_ul{
     color: var(--blanco);
     font-size: 1.5em;
@@ -98,6 +117,7 @@ cursor: pointer;
     width: 90%;
     text-align: center;
     margin: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .imagensection_fi_qui{
