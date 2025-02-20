@@ -134,3 +134,50 @@ margin-bottom: 5em;
     text-align: center;
     
 }
+
+
+
+
+@media (max-width: 480px), (max-width: 768px) {
+    .header-tiitle-img {
+      display: flex;
+      flex-direction: column; /* Asegura que los elementos se apilen */
+      align-items: center; /* Centra el contenido */
+      text-align: center; /* Asegura que el texto se alinee correctamente */
+      padding: 1em;
+      text-align: center;
+    }
+  
+    .header--image-container {
+      display: flex;
+      flex-direction: column; /* Asegura que la imagen y el texto estén en columna */
+      align-items: center;
+    }
+  
+    .header--image {
+      max-width: 100%; /* Asegura que la imagen se adapte al ancho del contenedor */
+      height: auto;
+      border-radius: 0em;
+    }
+   
+   .imagensection_fi_qui{
+    width: 100%;
+    height: 50%;
+   }
+
+   ul{
+
+    margin-left: 1em;
+    font-size: 1.5cap;
+    list-style-type: none;
+    width: 88%;
+   }
+    .parr_h3 {
+      width: 355px;
+      margin-bottom: -5em; /* Limita el ancho del texto para evitar que sea demasiado grande */
+    }
+.header--image{
+    height: 15rem;
+}
+  }
+  
