@@ -1,0 +1,73 @@
+
+body{
+    background-color: var(--negro);
+}
+:root{
+ --blanco: white;
+ --negro: black;
+}
+.header--image-biologia{ 
+    width: 70vb;
+    border-radius: 10%;
+}
+header{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin:4em;
+}
+.header-tiitle-container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 5em;
+    align-items: center;
+
+
+}
+.header--image{
+    margin-left: 2em;
+    transform: translateX(-50px);
+    animation: MoverseDerecha 1s ease-in-out forwards ;
+    opacity: 0;
+}
+@keyframes MoverseDerecha{
+    fromt{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform:  translateX(10px);
+    }
+}
+.constiner-move-parr{
+    animation: MoverseIzquierda 1s ease-in-out forwards;
+    transform: translateX(50px);
+    opacity: 0;
+
+}
+
+@keyframes MoverseIzquierda{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(10px);
+    }
+}
+
+
+.parr-header{
+    color: var(--blanco);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.biologia-profesor-eduador{
+    width: 100%;
+    height: 30rem;
+}
