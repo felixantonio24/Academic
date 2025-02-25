@@ -71,3 +71,34 @@ header{
     width: 100%;
     height: 30rem;
 }
+.parrdebajo_header{
+    color: var(--blanco);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+}
+.container-lista, p{
+color: var(--blanco);
+text-align: center;
+list-style-type: none;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1rem;
+margin: 2em;
+}
+.footter_biologia {
+    background-color: rgb(113, 113, 117);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
+    overflow: hidden; /* Evita desbordes internos */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
