@@ -129,7 +129,7 @@ margin-bottom: 5em;
     display: flex;
 }
 .footter_fisica{
-    background-color: rgb(113, 113, 117);
+    color: var(--blanco);
     width: 100%;
     text-align: center;
     

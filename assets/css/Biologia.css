@@ -1,104 +1,156 @@
-
-body{
-    background-color: var(--negro);
-}
-:root{
- --blanco: white;
- --negro: black;
-}
-.header--image-biologia{ 
-    width: 70vb;
-    border-radius: 10%;
-}
-header{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin:4em;
-}
-.header-tiitle-container{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    gap: 5em;
-    align-items: center;
-
-
-}
-.header--image{
-    margin-left: 2em;
-    transform: translateX(-50px);
-    animation: MoverseDerecha 1s ease-in-out forwards ;
-    opacity: 0;
-}
-@keyframes MoverseDerecha{
-    fromt{
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to{
-        opacity: 1;
-        transform:  translateX(10px);
-    }
-}
-.constiner-move-parr{
-    animation: MoverseIzquierda 1s ease-in-out forwards;
-    transform: translateX(50px);
-    opacity: 0;
-
+/* Reset básico *//* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-@keyframes MoverseIzquierda{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity:1;
-        transform: translateX(10px);
-    }
-}
-
-
-.parr-header{
-    color: var(--blanco);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    width: 100%;
-}
-
-.biologia-profesor-eduador{
-    width: 100%;
-    height: 30rem;
-}
-.parrdebajo_header{
-    color: var(--blanco);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
-    justify-content: center;
-    text-align: center;
-}
-.container-lista, p{
-color: var(--blanco);
-text-align: center;
-list-style-type: none;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: 1rem;
-margin: 2em;
-}
-.footter_biologia {
-    background-color: rgb(113, 113, 117);
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    padding: 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
-    overflow: hidden; /* Evita desbordes internos */
+:root {
+    --blanco: white;
+    --negro: black;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden; /* Evita desplazamiento lateral */
+}
+
+/* Contenedor del Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en móviles */
+}
+
+/* Imagen del Header */
+.header--image-biologia {
+    width: 70vw; /* Cambié `vb` a `vw` */
+    max-width: 300px; /* Evita que sea demasiado grande en pantallas grandes */
+    border-radius: 10%;
+
+}
+
+/* Contenedor del título */
+.header-tiitle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+}
+
+/* Animación de la imagen */
+.header--image {
+    margin-left: 2em;
+    transform: translateX(-50px);
+    animation: MoverseDerecha 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes MoverseDerecha {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación del párrafo */
+.constiner-move-parr {
+    animation: MoverseIzquierda 1s ease-in-out forwards;
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+@keyframes MoverseIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Párrafos */
+.parr-header, .parrdebajo_header {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 90%;
+    margin: 1em auto;
+}
+
+/* Imagen secundaria */
+.biologia-profesor-eduador {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+}
+
+/* Listas y párrafos */
+.container-lista, p {
+    text-align: center;
+    list-style-type: none;
+    font-size: 1rem;
+    margin: 2em;
+}
+
+/* Footer */
+.footter_biologia {
+    background-color: rgb(113, 113, 117);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Evita problemas de superposición */
+    bottom: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Para Tablets */
+@media screen and (max-width: 768px) {
+    .header-tiitle-container {
+        flex-direction: column; /* Apila elementos en columnas */
+        text-align: center;
+        gap: 1em;
+    }
+    
+    .header--image {
+        margin-left: 0;
+        width: 60vw;
+    }
+
+    .parr-header, .parrdebajo_header {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+}
+
+/* Para Celulares */
+@media screen and (max-width: 480px) {
+    .header-tiitle-container {
+        gap: 0.5em;
+    }
+
+    .header--image {
+        width: 80vw;
+    }
+
+    .parr-header, .parrdebajo_header {
+        font-size: 0.9rem;
+    }
+
+    .footter_biologia {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
 }
