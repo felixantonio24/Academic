@@ -7,13 +7,78 @@
     padding: 0;
     margin: 0;
 }
-.tittle-header{
-     font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+body{
+    background-color: black;
 }
-.parr-header{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:20px ;
+.tittle-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-family: "Anton", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size:4.8rem ;
+  color: white;
+  margin-bottom: 30px;
+
 }
 
+.container-img-parr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+.container-header-parr{
+   flex:1;
+   width: 30rem;
+   margin: 4rem;
+
+}
+
+
+.parr-header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
+    text-align:justify;
+    color: white;
+    transform: translateX(-100%);
+   opacity: 0; 
+    animation: Derecha 1.5s ease-in-out forwards;
+    animation-delay: 0; /* Retraso antes de que empiece la animación */
+}
+@keyframes Derecha {
+    
+    from{
+        transform: translateX(-100%); /* Empieza 100% a la izquierda (fuera de la pantalla) */
+        opacity: 0;
+    } to{
+        transform:translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+.img-pro{
+    flex: 1;
+}
+.img-profesores{
+    width:450px;
+    height: 380px;
+    border-radius: 10px;
+    transform: translateX(+100%);
+    animation: Izquierda 1.5s ease-in-out forwards;
+    animation-delay:0;
+    opacity: 0;
+}
+
+@keyframes Izquierda {
+    from{
+        opacity: 0;
+        transform: translateX(+100%);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
