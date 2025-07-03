@@ -154,9 +154,9 @@ background-color: var(--negr);
   background-color: rgba(48, 54, 55, 0.437);
   border-radius: 10px;
   animation: aparcersection 2s ease-in;
+  width: 100%;
 
 }
-
 @keyframes aparcersection {
   from{
     opacity: 0;
@@ -165,15 +165,27 @@ background-color: var(--negr);
   }
 }
 
+.container_imagenes_sub{
+
+justify-content: center;
+align-items: center;
+display: block;
+}
+
+
+
 .imagensection1{
-  width: 14rem;
+  width: 80%;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 
 }
 .imgagensection2{
-  width: 14rem;
-margin-left:13rem;
+  width: 80%;
   border-radius: 10px;
+ 
+
 }
 
 }

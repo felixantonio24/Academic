@@ -107,50 +107,64 @@ opacity: 1;
 footer{
     bottom: unset;
 }
+@media (min-width:360px) and (max-width:780px){
 
-@media (min-width:360px){
-
-   .tittle-header{
-    text-align: center;
-    font-size: 2rem;
-    animation: aparecer 2s ease-in forwards;
-    opacity: 0;
-    font-size: 2rem;
-
+    .container-tittle-header{
+        background-color: black;
+        margin: 0;
+        padding: 0; /* Asegúrate de que no haya padding aquí */
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        /* Si aun así hay espacio a los lados, revisa el body o html en tu navegador */
     }
-   .container-tittle-header{
-background-color: black;
-margin: 0;
-padding: 0;
-   }
 
+    .tittle-header{
+        animation: aparecer 2s ease-in forwards;
+        opacity: 0;
+        text-align: center;
+        width: 100%; /* Asegura que el contenedor del texto ocupe el 100% */
+        max-width: 100%; /* Por si acaso */
+        margin-bottom: 60px;
+        /* --- ¡CAMBIO CLAVE AQUÍ! --- */
+        font-size: 2rem; /* Reduce un poco el tamaño si 2.5rem era muy grande. */
+                          /* Puedes probar con 1.8rem o incluso 1.5rem si es necesario. */
+                          /* O considera usar 'vw' (viewport width) para un tamaño más responsivo,
+                             ej: font-size: 8vw; para que se ajuste al ancho de la pantalla. */
+        
+        margin-left: 0; /* Asegúrate de que no haya márgenes desplazándolo */
+        margin-right: 0;
+        
+        /* Estas son buenas prácticas para asegurar que el texto se ajuste si es largo */
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Tus @keyframes aparecer están bien */
     @keyframes aparecer {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
+        from{ opacity: 0; }
+        to{ opacity: 1; }
     }
+
+    /* El resto de tu CSS para móviles (container-img-parr, parr-header, img-profesores)
+       parece estar bien ahora para el desbordamiento horizontal. */
     .container-img-parr{
         display: block;
-        justify-content:center;
         margin-bottom: 0;
-
     }
-    .parr-header{
+    .container-header-parr {
+        width: 90%;
+        margin: 2rem auto;
+    }
+    .parr-header {
         text-align: justify;
-        display: flex;
-        margin-left:-55px;
-        max-width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
     }
-    .img-pro
     .img-profesores{
-        width: 100%;
-        height: 21rem;
-
-    }
-    .img-pro{
-        margin-top:-2rem;
-        display: flex;
+        width: 90%;
+        height: auto;
+        max-width: 450px;
+        display: block;
+        margin: 2rem auto;
     }
 }
