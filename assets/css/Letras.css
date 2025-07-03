@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 *,
 *::after,
  *::before{
@@ -5,6 +8,49 @@
     padding:0;
     margin: 0;
 }
+ 
+@media ( min-width:360px){
+.navbar {
+    background-color: var(--plom);
+    padding: 1rem;
+  
+
+  }
+  .menu li a  {
+    color: white;
+    list-style-type: none;
+    text-decoration-line: none;
+    font-weight: 900;
+    transition: background-color 0.5s ease;
+    opacity: 1;
+    transform: translateY(+100%);
+    animation: bajar 2s ease-in-out forwards;
+  }
+ @keyframes bajar {
+   from{
+    opacity: 0;
+    transform: translateY(50%);
+   }  to{
+    opacity: 1;
+    transform:translateY(0);
+   }
+ }
+
+  .menu li a:hover{
+    background-color: var(--bla);
+    border-radius: 5px;
+    color: var(--negr);
+    text-shadow: 2px 2px 1px rgb(201, 99, 30);
+
+    
+  }
+  .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos de la barra de navegación se ajusten en pantallas más pequeñas */
+    margin-bottom: 3rem;
+  }
 :root{
     --negr:black;
     --plom:#808080;
@@ -19,17 +65,115 @@ background-color: var(--negr);
     display: flex;
 
 }
+.container-tittles{
+  z-index: 2;
+  position: relative;
+
+
+
+}
+
 .header--image-container{
     width: 100% ;
-    height: 60%;
-    z-index: -1;
-
-}
-
-.header--image{
-    display: flex;
-    z-index: -1;
+    height:auto;
 }
 
 
+.headerimage{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  animation: Aparecer 2s ease-in forwards ;
+  opacity: 1;
+  z-index: -1;
+  display: flex;
+  filter: opacity(0.5);
 
+}
+@keyframes Aparecer {
+   from{
+    opacity: 0;
+   }to{
+    opacity: 1;
+   }
+}
+
+
+.parr{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    text-align:center;
+    opacity: 0;
+    animation: aparecer 2s ease-in forwards;
+    animation-delay: 2ms;
+    margin-bottom: 2rem;
+}
+
+
+@keyframes  aparecer {
+   from{
+    opacity: 0;
+   } to{
+    opacity: 1;
+   }
+}
+
+
+.header-tittle-h2{
+    font-family: "Anton", sans-serif;
+    font-size: 3em;
+    margin-bottom: 12px;
+    transform:translateX(100px) ;
+    opacity: 1;
+    animation: DERECHA 2s ease-in-out forwards;
+    z-index: 2;
+    justify-content: center;
+    position: relative;
+    margin-top: -13rem;
+    display: flex;    
+
+}
+@keyframes DERECHA {
+  from{
+    opacity: 0;
+    transform: translateX(-50%);
+  }to{
+    opacity: 1;
+    transform: translateX(0) ;
+  }
+  
+}
+
+
+.header-tittle-h2, p{
+    color: var(--bla);
+    text-align: center;
+
+}
+.section_container1{
+  background-color: rgba(48, 54, 55, 0.437);
+  border-radius: 10px;
+  animation: aparcersection 2s ease-in;
+
+}
+
+@keyframes aparcersection {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+.imagensection1{
+  width: 14rem;
+  border-radius: 10px;
+
+}
+.imgagensection2{
+  width: 14rem;
+margin-left:13rem;
+  border-radius: 10px;
+}
+
+}
